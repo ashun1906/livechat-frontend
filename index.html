@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveChat Monitor - Thu gọn Web</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="main-container">
+        <div class="topbar">
+            <div></div>
+            <button class="mode-toggle" id="mode-toggle">🌙 Dark Mode</button>
+            <div class="welcome" id="welcome-msg" style="display:none;"></div>
+        </div>
+        <h2>LIVECHAT MONITOR</h2>
+        <div id="login-section" style="display:none;">
+            <form class="login-form" id="login-form">
+                <input type="text" id="username" placeholder="Tên đăng nhập" required autocomplete="username">
+                <input type="password" id="password" placeholder="Mật khẩu" required autocomplete="current-password">
+                <button type="submit">Đăng nhập</button>
+                <div class="error" id="login-error"></div>
+            </form>
+        </div>
+        <div id="table-section" style="display:none;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nền tảng</th>
+                        <th>Chatting</th>
+                    </tr>
+                </thead>
+                <tbody id="data-table">
+                </tbody>
+            </table>
+            <div style="text-align:center;">
+                <button class="logout-btn" onclick="logout()">Đăng xuất</button>
+                <button class="logout-btn" id="change-password-btn" type="button" style="margin-top:10px;background:#ffa726;color:#222;">Đổi mật khẩu</button>
+            </div>
+            <form id="change-password-form" style="display:none;max-width:340px;margin:18px auto 0 auto;">
+                <input type="password" id="new-password" placeholder="Mật khẩu mới" required style="margin-bottom:8px;width:100%;padding:10px;border-radius:6px;border:1px solid #ccc;">
+                <input type="password" id="confirm-password" placeholder="Xác nhận mật khẩu" required style="margin-bottom:8px;width:100%;padding:10px;border-radius:6px;border:1px solid #ccc;">
+                <button type="submit" style="width:100%;background:#1976d2;color:#fff;font-weight:bold;padding:10px;border-radius:6px;border:none;">Xác nhận đổi mật khẩu</button>
+                <div class="error" id="change-password-error"></div>
+                <div class="error" id="change-password-success" style="color:#43a047;"></div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        Bản quyền thuộc về ASHUN 69VN
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
